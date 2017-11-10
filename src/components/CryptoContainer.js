@@ -8,13 +8,12 @@ import CoinCard from './CoinCard';
 
 class CryptoContainer extends Component {
 	
-	componentDidMount() {
+	componentWillMount() {
 		this.props.FetchCoinData();
 	}
 
 	renderCoinCards() {
 		const { crypto } = this.props;
-		console.log(crypto)
 		return crypto.data.map((coin, index) =>
 			<CoinCard
 				key={index}
